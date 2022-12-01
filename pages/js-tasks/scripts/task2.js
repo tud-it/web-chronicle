@@ -1,6 +1,6 @@
 var Züge;
 var feld = [1, 2, 3, 4, 5, 6, 7, 8, ""];
-
+var finished = true;
 
 function shuffle(arr) {
   const shuffled = arr.sort(() => 0.5 - Math.random());
@@ -18,6 +18,7 @@ function newgame() {
   document.getElementById("time").textContent = "00:00:00";
   sec = 0; min = 0; hrs = 0;
   timer();
+  finished = true;
 }
 
 function chr(ind) {
@@ -37,21 +38,24 @@ function tausch(index, zahl) {
 }
 
 function move(index) {
-  if ((index + 3) <= 9 && !(chr(index + 3).firstChild.innerHTML)) {
-    tausch(index, 3);
-  }
-  else if (index % 3 && !(chr(index + 1).firstChild.innerHTML)) {
-    tausch(index, 1);
-  }
-  else if ((index - 3) >= 1 && !(chr(index - 3).firstChild.innerHTML)) {
-    tausch(index, -3);
-  }
-  else if ((index - 1) % 3 && !(chr(index - 1).firstChild.innerHTML)) {
-    tausch(index, -1);
-  }
-  if ((feld[0] == 1) && (feld[1] == 2) && (feld[2] == 3) && (feld[3] == 4) && (feld[4] == 5) && (feld[5] == 6) && (feld[6] == 7) && (feld[7] == 8) && !(feld[8])) {
-    clearTimeout(t);
-    document.querySelector("#out").innerHTML = "You Win!<br/>Deine Zeit war " + hrs + ":" + min + ":" + sec + ".<br/>Du hast " + Züge + " Z&uuml;ge gebraucht"
+  if (finished) {
+    if ((index + 3) <= 9 && !(chr(index + 3).firstChild.innerHTML)) {
+      tausch(index, 3);
+    }
+    else if (index % 3 && !(chr(index + 1).firstChild.innerHTML)) {
+      tausch(index, 1);
+    }
+    else if ((index - 3) >= 1 && !(chr(index - 3).firstChild.innerHTML)) {
+      tausch(index, -3);
+    }
+    else if ((index - 1) % 3 && !(chr(index - 1).firstChild.innerHTML)) {
+      tausch(index, -1);
+    }
+    if ((feld[0] == 1) && (feld[1] == 2) && (feld[2] == 3) && (feld[3] == 4) && (feld[4] == 5) && (feld[5] == 6) && (feld[6] == 7) && (feld[7] == 8) && !(feld[8])) {
+      clearTimeout(t);
+      document.querySelector("#out").innerHTML = "You Win!<br/>Deine Zeit war " + hrs + ":" + min + ":" + sec + ".<br/>Du hast " + Züge + " Z&uuml;ge gebraucht"
+      finished = false;
+    }
   }
 }
 
@@ -79,4 +83,5 @@ function add() {
 }
 function timer() {
   t = setTimeout(add, 1000);
+
 }
