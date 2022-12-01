@@ -53,6 +53,10 @@ async function slide(num) {
     globalThis.lastPic = elemID.src;
     globalThis.lastPicID = num;
   }
+  if (pairs > 6) {
+    alert("Bitte spiel ordentlich!!!");
+    reset();
+  }
   globalThis.canClick = true;
 }
 function reset(){
@@ -69,4 +73,8 @@ function reset(){
   document.getElementById("11").src = "./../../../img/js-tasks/Spades.svg";
   document.getElementById("12").src = "./../../../img/js-tasks/Spades.svg";
   globalThis.pictures = shuffle(pictures);
+  globalThis.counter = 0;
+  globalThis.pairs = 0;
+  document.getElementById("pair").innerText = "Pairs found: " + pairs + "/6";
+  document.getElementById("moves").innerText = "Move:" + counter;
 }
