@@ -53,6 +53,10 @@ async function slide(num) {
     globalThis.lastPic = elemID.src;
     globalThis.lastPicID = num;
   }
+  if (pairs > 6) {
+    alert("Bitte spiel ordentlich!!!");
+    reset();
+  }
   globalThis.canClick = true;
 }
 function reset() {
@@ -71,4 +75,6 @@ function reset() {
   globalThis.pictures = shuffle(pictures);
   globalThis.counter = 0;
   globalThis.pairs = 0;
+  document.getElementById("pair").innerText = "Pairs found: " + pairs + "/6";
+  document.getElementById("moves").innerText = "Move:" + counter;
 }
