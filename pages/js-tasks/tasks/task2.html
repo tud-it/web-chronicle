@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<head>
+  <meta charset="UTF-8" lang="de">
+  <script src="./../scripts/task2.js"></script>
+    <style>
+      td {
+        border: 1px solid black;
+      }
+      td {
+        height: 200px;
+        width: 200px;
+      }
+    </style>
+    <title>Aufgabe 2 - Schiebepuzzle</title>
+  </head>
+  <body>
+    <table>
+      <tr>
+        <td id="a" onclick="slide(1)"></td>
+        <td id="b" onclick="slide(2)"></td>
+        <td id="c" onclick="slide(3)"></td>
+      </tr>
+      <tr>
+        <td id="d" onclick="slide(4)"></td>
+        <td id="e" onclick="slide(5)"></td>
+        <td id="f" onclick="slide(6)"></td>
+      </tr>
+      <tr>
+        <td id="g" onclick="slide(7)"></td>
+        <td id="h" onclick="slide(8)"></td>
+        <td id="i" onclick="slide(9)"></td>
+      </tr>
+    </table>
+    <button onclick="initGame()">Start</button>
+    <button onclick="clearing()">Reset</button>
+    <br />
+    <br />
+    <button onclick="location.href='./../index.html'">Home</button>
+  </body>
