@@ -1,23 +1,27 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script src="./../javascript/task4.js"></script>
-		<style>
-			table{
-				background-color: rgb(232,219,191);
-				height: 450px;
-			}
-			img{
-				width: 150px;
-				height: auto;
-			}
-		</style>
-    <title>Aufgabe 4 - Weihnachtsmarkt</title>
-  </head>
-  <body>
+
+<head>
+  <meta charset="UTF-8" lang="de" />
+  <link rel="stylesheet" type="text/css" href="/styles/global.css" />
+  <script type="module" src="https://md-block.verou.me/md-block.js"></script>
+  <script src="./../scripts/task4.js"></script>
+
+  <style>
+    table {
+      background-color: rgb(232, 219, 191);
+      height: 450px;
+    }
+    img {
+      width: 150px;
+      height: auto;
+    }
+  </style>
+
+  <title>Aufgabe 4 - Weihnachtsmarkt</title>
+</head>
+
+<body>
+  <main>
     <table>
       <tr>
         <td>
@@ -42,7 +46,14 @@
             src="https://ubistatic-a.akamaihd.net/0034/int/forum/pictures/2016_12_xmas/building_improved_watermill_s.gif"
           />
         </td>
-        <td><img src="https://www.kennerblick.net/grafik/w/weihnachtsbaum70.gif" id="baum" onmouseover="change()" onmouseout="changeBack()"></td>
+        <td>
+          <img
+            src="https://www.kennerblick.net/grafik/w/weihnachtsbaum70.gif"
+            id="baum"
+            onmouseover="change()"
+            onmouseout="changeBack()"
+          />
+        </td>
         <td>
           <img
             src="https://ubistatic-a.akamaihd.net/0034/int/forum/pictures/2016_12_xmas/building_improved_watermill_s.gif"
@@ -69,5 +80,5 @@
     </table>
     <br />
     <button onclick="location.href='./../index.html'">Home</button>
-  </body>
-</html>
+  </main>
+</body>

@@ -1,91 +1,93 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script src="./../javascript/task5.js"></script>
-    <style>
-      body {
-        background-image: url("./../img/body.svg");
-        background-size: cover;
-        display: grid;
-        justify-content: center;
-        align-content: center;
-        text-align: center;
-      }
-      img {
-        height: 200px;
-        width: 200px;
-      }
-      td {
-        background-image: url("./../img/shokunin_sky_with_clouds.svg");
-        background-size: cover;
-      }
-      .contain {
-        margin-top: 50px;
-        background-color: rgba(128, 128, 128, 0.67);
-        padding: 20px;
-        border-radius: 25px;
-        display: flex;
-      }
-      #mech{
-        margin-left: 30px;
-        width: 300px;
-        text-align: center;
-      }
-    </style>
-    <title>Aufgabe 5 - Memory</title>
-  </head>
-  <body>
+<head>
+  <meta charset="UTF-8" lang="de" />
+  <link rel="stylesheet" type="text/css" href="/styles/global.css" />
+  <script type="module" src="https://md-block.verou.me/md-block.js"></script>
+  <script src="./../scripts/task5.js"></script>
+
+  <style>
+    body {
+      background-image: url("/img/js-tasks/body.svg");
+      background-size: cover;
+      display: grid;
+      justify-content: center;
+      align-content: center;
+      text-align: center;
+    }
+
+    img {
+      height: 200px;
+      width: 200px;
+    }
+
+    td {
+      background-image: url("/img/js-tasks/shokunin_sky_with_clouds.svg");
+      background-size: cover;
+    }
+
+    .contain {
+      margin-top: 50px;
+      background-color: rgba(128, 128, 128, 0.67);
+      padding: 20px;
+      border-radius: 25px;
+      display: flex;
+    }
+
+    #mech {
+      margin-left: 30px;
+      width: 300px;
+      text-align: center;
+    }
+  </style>
+
+  <title>Aufgabe 5 - Memory</title>
+</head>
+
+<body>
+  <main>
     <div class="contain">
       <div class="">
         <table>
           <tr>
             <td>
-              <img
-                src="./../img/Spades.svg"
-                id="1"
-                onclick="slide(1)"
-                onchange="document.getElementById('1').src = './../img/Spades.svg'"
-              />
+              <img src="/img/js-tasks/Spades.svg" id="1" onclick="slide(1)" />
             </td>
             <td>
-              <img src="./../img/Spades.svg" id="2" onclick="slide(2)" />
+              <img src="/img/js-tasks/Spades.svg" id="2" onclick="slide(2)" />
             </td>
             <td>
-              <img src="./../img/Spades.svg" id="3" onclick="slide(3)" />
+              <img src="/img/js-tasks/Spades.svg" id="3" onclick="slide(3)" />
             </td>
             <td>
-              <img src="./../img/Spades.svg" id="4" onclick="slide(4)" />
+              <img src="/img/js-tasks/Spades.svg" id="4" onclick="slide(4)" />
             </td>
           </tr>
           <tr>
             <td>
-              <img src="./../img/Spades.svg" id="5" onclick="slide(5)" />
+              <img src="/img/js-tasks/Spades.svg" id="5" onclick="slide(5)" />
             </td>
             <td>
-              <img src="./../img/Spades.svg" id="6" onclick="slide(6)" />
+              <img src="/img/js-tasks/Spades.svg" id="6" onclick="slide(6)" />
             </td>
             <td>
-              <img src="./../img/Spades.svg" id="7" onclick="slide(7)" />
+              <img src="/img/js-tasks/Spades.svg" id="7" onclick="slide(7)" />
             </td>
             <td>
-              <img src="./../img/Spades.svg" id="8" onclick="slide(8)" />
+              <img src="/img/js-tasks/Spades.svg" id="8" onclick="slide(8)" />
             </td>
           </tr>
           <tr>
             <td>
-              <img src="./../img/Spades.svg" id="9" onclick="slide(9)" />
+              <img src="/img/js-tasks/Spades.svg" id="9" onclick="slide(9)" />
             </td>
             <td>
-              <img src="./../img/Spades.svg" id="10" onclick="slide(10)" />
+              <img src="/img/js-tasks/Spades.svg" id="10" onclick="slide(10)" />
             </td>
             <td>
-              <img src="./../img/Spades.svg" id="11" onclick="slide(11)" />
+              <img src="/img/js-tasks/Spades.svg" id="11" onclick="slide(11)" />
             </td>
             <td>
-              <img src="./../img/Spades.svg" id="12" onclick="slide(12)" />
+              <img src="/img/js-tasks/Spades.svg" id="12" onclick="slide(12)" />
             </td>
           </tr>
         </table>
@@ -95,10 +97,10 @@
         <p id="moves">Move: 0</p>
         <p id="pair">Pairs found: 0/6</p>
         <button id="res" onclick="reset()">reset</button>
-        <br>
-        <br>
+        <br />
+        <br />
         <button onclick="location.href='./../index.html'">Home</button>
       </div>
     </div>
-  </body>
-</html>
+  </main>
+</body>

@@ -1,19 +1,27 @@
 <!DOCTYPE html>
+
 <head>
-  <meta charset="UTF-8" lang="de">
+  <meta charset="UTF-8" lang="de" />
+  <link rel="stylesheet" type="text/css" href="/styles/global.css" />
+  <script type="module" src="https://md-block.verou.me/md-block.js"></script>
   <script src="./../scripts/task2.js"></script>
-    <style>
-      td {
-        border: 1px solid black;
-      }
-      td {
-        height: 200px;
-        width: 200px;
-      }
-    </style>
-    <title>Aufgabe 2 - Schiebepuzzle</title>
-  </head>
-  <body>
+
+  <style>
+    td {
+      border: 1px solid black;
+    }
+
+    td {
+      height: 200px;
+      width: 200px;
+    }
+  </style>
+
+  <title>Aufgabe 2 - Schiebepuzzle</title>
+</head>
+
+<body>
+  <main>
     <table>
       <tr>
         <td id="a" onclick="slide(1)"></td>
@@ -36,4 +44,5 @@
     <br />
     <br />
     <button onclick="location.href='./../index.html'">Home</button>
-  </body>
+  </main>
+</body>
