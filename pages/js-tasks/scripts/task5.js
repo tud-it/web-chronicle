@@ -55,7 +55,7 @@ async function slide(num) {
   }
   globalThis.canClick = true;
 }
-function reset(){
+function reset() {
   document.getElementById("1").src = "/img/js-tasks/Spades.svg";
   document.getElementById("2").src = "/img/js-tasks/Spades.svg";
   document.getElementById("3").src = "/img/js-tasks/Spades.svg";
@@ -69,4 +69,6 @@ function reset(){
   document.getElementById("11").src = "/img/js-tasks/Spades.svg";
   document.getElementById("12").src = "/img/js-tasks/Spades.svg";
   globalThis.pictures = shuffle(pictures);
+  globalThis.counter = 0;
+  globalThis.pairs = 0;
 }
