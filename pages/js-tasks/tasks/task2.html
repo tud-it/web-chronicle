@@ -8,13 +8,38 @@
 
   <style>
     td {
-      border: 1px solid black;
-    }
+	height: 200px;
+	width: 300px;
+	text-align: center;
+	border: 0px solid;
+	background-color: #9100cb;
+}
 
-    td {
-      height: 200px;
-      width: 200px;
-    }
+table {
+	margin: 0;
+	margin-top: center;
+	margin-left: center;
+	margin-right: center;
+	margin-bottom: center;
+	background-color: rgb(0, 0, 0);
+	margin: auto;
+	text-align: center;
+	font-size: 100px;
+	border-radius: 10px;
+}
+
+button {
+	color: rgb(0, 0, 0);
+	background-color: rgb(236, 172, 255);
+	size: 110px;
+	margin: auto;
+	font-size: 70px;
+	border-radius: 30px;
+	border-color: blueviolet;
+	border-width: 0ch;
+	background-image: linear-gradient(90deg, #e8d55a, #ff0000, #e8d55a);
+}
+
   </style>
 
   <title>Aufgabe 2 - Schiebepuzzle</title>
@@ -23,26 +48,24 @@
 <body>
   <main>
     <table>
-      <tr>
-        <td id="a" onclick="slide(1)"></td>
-        <td id="b" onclick="slide(2)"></td>
-        <td id="c" onclick="slide(3)"></td>
-      </tr>
-      <tr>
-        <td id="d" onclick="slide(4)"></td>
-        <td id="e" onclick="slide(5)"></td>
-        <td id="f" onclick="slide(6)"></td>
-      </tr>
-      <tr>
-        <td id="g" onclick="slide(7)"></td>
-        <td id="h" onclick="slide(8)"></td>
-        <td id="i" onclick="slide(9)"></td>
-      </tr>
-    </table>
-    <button onclick="initGame()">Start</button>
-    <button onclick="clearing()">Reset</button>
-    <br />
-    <br />
-    <button onclick="location.href='./../index.html'">Home</button>
+			<tr>
+				<td id="a" onclick="move(1)"></td>
+				<td id="b" onclick="move(2)"></td>
+				<td id="c" onclick="move(3)"></td>
+			</tr>
+			<tr>
+				<td id="d" onclick="move(4)"></td>
+				<td id="e" onclick="move(5)"></td>
+				<td id="f" onclick="move(6)"></td>
+			</tr>
+			<tr>
+				<td id="g" onclick="move(7)"></td>
+				<td id="h" onclick="move(8)"></td>
+				<td id="i" onclick="move(9)"></td>
+			</tr>
+		</table>
+		<button id="newgame" onclick="newgame()">New Game</button>
+		<h1 id="time"><time>00:00:00</time></h1>
+		<h2 id="out"></h2>
   </main>
 </body>
