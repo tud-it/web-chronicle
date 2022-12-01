@@ -2,7 +2,7 @@
 
 <head>
   <meta charset="UTF-8" lang="de" />
-  <link rel="stylesheet" type="text/css" href="/styles/global.css" />
+  <link rel="stylesheet" type="text/css" href="./../../../styles/global.css" />
   <script type="module" src="https://md-block.verou.me/md-block.js"></script>
   <script src="./../scripts/task1.js"></script>
 
@@ -10,12 +10,14 @@
 </head>
 
 <body>
+  <nav>
+    <a class="button" href="/">Home</a>
+    <a class="button" href="./..">Zurück</a>
+  </nav>
+
   <main>
     <input type="number" id="inp" />
-    <button
-      id="btn"
-      onclick="adding(); document.getElementById('inp').value = ''"
-    >
+    <button id="btn" onclick="adding(); document.getElementById('inp').value = ''">
       add
     </button>
     <button id="sort" onclick="sorting()">sort</button>
@@ -24,6 +26,5 @@
     <textarea name="textf" id="textf" readonly="readonly"></textarea>
     <button onclick="clearing()">clear</button>
     <br />
-    <button onclick="location.href='./../index.html'">Home</button>
   </main>
 </body>
