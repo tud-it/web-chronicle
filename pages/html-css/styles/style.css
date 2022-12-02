@@ -1,0 +1,72 @@
+#red {
+  background-color: rgba(255, 0, 0, 100);
+  height: 200px;
+  width: 200px;
+
+}
+#green {
+  background-color: rgba(0, 255, 0, 100);
+  height: 200px;
+  width: 200px;
+}
+#blue {
+  background-color: rgba(0, 0, 255, 100);
+  height: 200px;
+  width: 200px;
+}
+/* body{background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ-W-aaZmTA5MoHm9lwqbnZnB6obbMVuL7rVw&usqp=CAU");} */
+* {
+  font-family: Arial, Times, sans-serif;
+}
+.kopf {
+  font-size: 10pt;
+  color: rgb(110, 110, 110);
+}
+h1 {
+  font-size: 14pt;
+  font-weight: bolder;
+  text-transform: capitalize;
+  text-decoration: underline;
+}
+h2 {
+  font-size: 12pt;
+  font-weight: bold;
+}
+p {
+  font-size: 11pt;
+}
+#lauch {
+  font-style: italic;
+  text-transform: uppercase;
+}
+.fuss {
+  font-size: 8pt;
+  color: rgb(85, 84, 84);
+  letter-spacing: 3px;
+}
+#Inhalt {
+  font-size: 12pt;
+}
+.inhalt li {
+  font-size: 10pt;
+  text-transform: capitalize;
+}
+.primary_list {
+  font-weight: bold;
+}
+.primary_list a {
+  color: black;
+}
+.primary_list a:visited {
+  color: rgb(113, 108, 108);
+  text-decoration: none;
+}
+.primary_list a:link {
+  text-decoration: none;
+}
+.primary_list a:hover {
+  text-decoration: none;
+}
+.primary_list a:active {
+  text-decoration: none;
+}

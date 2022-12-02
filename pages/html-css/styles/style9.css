@@ -1,0 +1,19 @@
+#haupt {
+  font-weight: bold;
+}
+#lroman {
+  font-weight: normal;
+  list-style-type: lower-roman;
+}
+#uroman {
+  font-weight: normal;
+  list-style-type: upper-roman;
+}
+#lalpha {
+  font-weight: normal;
+  list-style-type: lower-alpha;
+}
+#ualpha {
+  font-weight: normal;
+  list-style-type: upper-alpha;
+}

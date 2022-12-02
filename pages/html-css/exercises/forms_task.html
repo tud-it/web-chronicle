@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="./../../../styles/global.css"
+    />
+    <script type="module" src="https://md-block.verou.me/md-block.js"></script>
+    <title>forms task</title>
+  </head>
+  <body>
+    <nav>
+      <a class="button" href="./../../">Home</a>
+      <a class="button" href="./..">Zurück</a>
+    </nav>
+    <main>
+      <h1>Kontakt:</h1>
+      <form action="http://form.bot-on-line.com" method="post">
+        <table>
+          <tr>
+            <td>Name</td>
+            <td>
+              <input type="text" name="Name" id="name" placeholder="Name" />
+            </td>
+          </tr>
+          <tr>
+            <td>Vorname</td>
+            <td>
+              <input
+                type="text"
+                name="Vorname"
+                id="vorname"
+                placeholder="Vorname"
+              />
+            </td>
+          </tr>
+          <tr>
+            <td>Email</td>
+            <td>
+              <input
+                type="email"
+                name="email"
+                id="email"
+                placeholder="example@mail.com"
+              />
+            </td>
+          </tr>
+          <tr>
+            <td>Telefon</td>
+            <td>
+              <input
+                type="number"
+                name="tel_number"
+                id="tel_number"
+                placeholder="+49015442543543"
+              />
+            </td>
+          </tr>
+          <tr>
+            <td>Kommentar</td>
+            <td>
+              <textarea
+                name="Kommentar"
+                id="Kommentar"
+                cols="30"
+                rows="10"
+                placeholder="Ich bin ein Kommentar"
+              ></textarea>
+            </td>
+          </tr>
+          <tr>
+            <td><input type="submit" name="Senden" value="Senden" /></td>
+            <td><input type="reset" name="Leeren" value="Leeren" /></td>
+          </tr>
+        </table>
+      </form>
+    </main>
+  </body>
+</html>

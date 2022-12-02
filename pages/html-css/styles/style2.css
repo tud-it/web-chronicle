@@ -1,0 +1,43 @@
+a {
+  white-space: wrap;
+}
+.menue {
+  background-color: darkblue;
+  color: lightgrey;
+}
+.menue:hover {
+  background-color: lightblue;
+  color: darkgrey;
+}
+.text p {
+  font-size: 11pt;
+}
+.einleitung p {
+  font-size: 10pt;
+  text-align: center;
+  font-style: italic;
+  line-height: 1.5;
+}
+.text a {
+  text-decoration: none;
+  font-weight: bold;
+  color: black;
+  font-size: 11pt;
+}
+.text div p:first-child:first-letter {
+  font-size: 16pt;
+}
+.text p {
+  text-align: justify;
+  text-indent: 1em;
+  line-height: 1.5;
+}
+.eigenname {
+  white-space: nowrap;
+}
+td {
+  vertical-align: top;
+}
+th {
+  text-align: left;
+}

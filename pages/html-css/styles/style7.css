@@ -1,0 +1,29 @@
+        body{
+                background-image:url(logo.png);
+                background-position:bottom right;
+                background-attachment:fixed;
+                background-repeat:no-repeat;
+
+
+        }
+        td{
+                border:0px solid black;
+                width:150px;
+                height:40px;
+                text-align:center;
+                background-color:darkblue;
+                background-position:right;
+                background-repeat:no-repeat;
+                background-image:url(img3/standart.png);
+                background-position:120px 0px;
+                padding:0;
+
+        }
+        td:hover{
+                background-color:black;
+       }
+
+        a {
+                color:white;
+                text-decoration:none;
+        }
