@@ -60,18 +60,10 @@ async function slide(num) {
   globalThis.canClick = true;
 }
 function reset(){
-  document.getElementById("1").src = "./../../../img/js-tasks/Spades.svg";
-  document.getElementById("2").src = "./../../../img/js-tasks/Spades.svg";
-  document.getElementById("3").src = "./../../../img/js-tasks/Spades.svg";
-  document.getElementById("4").src = "./../../../img/js-tasks/Spades.svg";
-  document.getElementById("5").src = "./../../../img/js-tasks/Spades.svg";
-  document.getElementById("6").src = "./../../../img/js-tasks/Spades.svg";
-  document.getElementById("7").src = "./../../../img/js-tasks/Spades.svg";
-  document.getElementById("8").src = "./../../../img/js-tasks/Spades.svg";
-  document.getElementById("9").src = "./../../../img/js-tasks/Spades.svg";
-  document.getElementById("10").src = "./../../../img/js-tasks/Spades.svg";
-  document.getElementById("11").src = "./../../../img/js-tasks/Spades.svg";
-  document.getElementById("12").src = "./../../../img/js-tasks/Spades.svg";
+  for (let i = 1; i <= 12; i++) {
+    var num = i.toString()
+    document.getElementById(num).src = "./../../../img/js-tasks/Spades.svg";
+  }
   globalThis.pictures = shuffle(pictures);
   globalThis.counter = 0;
   globalThis.pairs = 0;
