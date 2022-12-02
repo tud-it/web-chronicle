@@ -15,7 +15,6 @@
     table {
       background-color: brown;
     }
-
   </style>
 
   <title>Aufgabe 6 - Schuhregal</title>
@@ -23,12 +22,17 @@
 
 <body>
   <nav>
-    <a class="button" href="/">Home</a>
+    <a class="button" href="./../../">Home</a>
     <a class="button" href="./..">Zurück</a>
   </nav>
 
   <main>
-    <input type="number" id="inp" placeholder="Please enter a shoe size:" onkeydown="search(this)" />
+    <input
+      type="number"
+      id="inp"
+      placeholder="Please enter a shoe size:"
+      onkeydown="search(this)"
+    />
     <button onclick="adding(); document.getElementById('inp').value = ''">
       Enter
     </button>
