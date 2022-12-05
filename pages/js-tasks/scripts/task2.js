@@ -1,18 +1,49 @@
 var Züge;
 var feld = [1, 2, 3, 4, 5, 6, 7, 8, ""];
 var finished = true;
+var height = 3; //=document.getElementById('gameheight')
+var width = 2;
+var SFX_move = new Audio("./../../../sound/Move.mp3");
+var SFX_win = new Audio("./../../../sound/Victory.mp3");
+var SFX_wrong = new Audio("./../../../sound/Wrong.mp3");
+var SFX_start = new Audio("./../../../sound/Start.mp3");
 
 function shuffle(arr) {
   const shuffled = arr.sort(() => 0.5 - Math.random());
-  var ranArr = shuffled.slice(0, 12);
+  var ranArr = shuffled.slice(0, height * width);
   return ranArr;
 }
 
-function newgame() {
-  feld = shuffle(feld);
-  for (i = 0; i <= feld.length - 1; i++) {
-    chr(i + 1).innerHTML = "<p>" + feld[i] + "</p>";
+function newfeld() {
+  feld = [];
+  for (i = 0; i <= height * width - 2; i++) {
+    feld[i] = i + 1;
   }
+  feld[height * width - 1] = "";
+}
+
+function newboard() {
+  newfeld();
+  feld = shuffle(feld);
+  board = document.getElementById("board");
+  board.innerHTML = "";
+  var index = 0;
+  var inner = "";
+
+  for (let i = 1; i <= height; i++) {
+    inner += "<tr>";
+    for (let j = 1; j <= width; j++) {
+      inner += "<td id='" + index + "' onclick='move(" + index + ")'>" + feld[index] + "</td>";
+      index++;
+    }
+    inner += "</tr>";
+  }
+  board.innerHTML += inner;
+}
+
+function newgame() {
+  SFX_start.play();
+  newboard()
   Züge = 0;
   clearTimeout(t);
   document.getElementById("time").textContent = "00:00:00";
@@ -21,42 +52,61 @@ function newgame() {
   finished = true;
 }
 
+
 function chr(ind) {
-  return document.querySelector("#" + String.fromCharCode(ind + 96) + "");
+
+  return document.getElementById(ind.toString());
 }
 
 function tausch(index, zahl) {
+  SFX_move.play();
 
-  merke = chr(index + zahl).firstChild.innerHTML;
-  chr(index + zahl).innerHTML = "<p>" + chr(index).firstChild.innerHTML + "</p>";
-  chr(index).innerHTML = "<p>" + merke + "</p>";
+  merke = chr(index + zahl).innerHTML;
+  chr(index + zahl).innerHTML = chr(index).innerHTML;
+  chr(index).innerHTML = merke;
 
-  temp = feld[index + zahl - 1];
-  feld[index + zahl - 1] = feld[index - 1];
-  feld[index - 1] = temp;
+  temp = feld[index + zahl];
+  feld[index + zahl] = feld[index];
+  feld[index] = temp;
   Züge += 1;
+  console.log(feld);
 }
 
 function move(index) {
   if (finished) {
-    if ((index + 3) <= 9 && !(chr(index + 3).firstChild.innerHTML)) {
-      tausch(index, 3);
+    if (chr(index + width) && !(chr(index + width).innerHTML)) {
+      tausch(index, width);
     }
-    else if (index % 3 && !(chr(index + 1).firstChild.innerHTML)) {
+    else if ( (index+1)%width && chr(index + 1) && !(chr(index + 1).innerHTML)) {
       tausch(index, 1);
     }
-    else if ((index - 3) >= 1 && !(chr(index - 3).firstChild.innerHTML)) {
-      tausch(index, -3);
+    else if (chr(index - width) && !(chr(index - width).innerHTML)) {
+      tausch(index, -width);
     }
-    else if ((index - 1) % 3 && !(chr(index - 1).firstChild.innerHTML)) {
+    else if (index%width && chr(index - 1) && !(chr(index - 1).innerHTML)) {
       tausch(index, -1);
     }
-    if ((feld[0] == 1) && (feld[1] == 2) && (feld[2] == 3) && (feld[3] == 4) && (feld[4] == 5) && (feld[5] == 6) && (feld[6] == 7) && (feld[7] == 8) && !(feld[8])) {
+    else {
+      SFX_wrong.play();
+    }
+    w=win();
+    if (w) {
+      SFX_win.play();
       clearTimeout(t);
       document.querySelector("#out").innerHTML = "You Win!<br/>Deine Zeit war " + hrs + ":" + min + ":" + sec + ".<br/>Du hast " + Züge + " Z&uuml;ge gebraucht"
       finished = false;
     }
   }
+}
+
+function win(){
+  w=true;
+  for (let i=0;i<=feld.length-2;i++){
+    if (feld[i]!=i+1){
+      w=false;
+    }
+  }
+  return w;
 }
 
 var sec = 0;

@@ -9,7 +9,7 @@
   <style>
     td {
       height: 200px;
-      width: 300px;
+      width: auto;
       text-align: center;
       border: 0px solid;
       background-color: #9100cb;
@@ -52,22 +52,7 @@
   </nav>
 
   <main>
-    <table>
-      <tr>
-        <td id="a" onclick="move(1)"></td>
-        <td id="b" onclick="move(2)"></td>
-        <td id="c" onclick="move(3)"></td>
-      </tr>
-      <tr>
-        <td id="d" onclick="move(4)"></td>
-        <td id="e" onclick="move(5)"></td>
-        <td id="f" onclick="move(6)"></td>
-      </tr>
-      <tr>
-        <td id="g" onclick="move(7)"></td>
-        <td id="h" onclick="move(8)"></td>
-        <td id="i" onclick="move(9)"></td>
-      </tr>
+    <table id="board">
     </table>
     <button id="newgame" onclick="newgame()">New Game</button>
     <h1 id="time"><time>00:00:00</time></h1>
