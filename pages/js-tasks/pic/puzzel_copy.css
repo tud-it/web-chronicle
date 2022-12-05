@@ -1,0 +1,35 @@
+#puzzle {
+	margin-left: 10px;
+	width: 380px;
+	border: 3px solid rgb(255, 255, 255);
+}
+
+#puzzle div.piece {
+	/*background-image: url('test.png');*/
+	background-repeat: no-repeat;
+	float: left;
+}
+
+#puzzle div.empty_piece {
+	float: left;
+	background: linear-gradient(325deg, rgb(255, 0, 238) 0%, rgb(0, 0, 0) 50%,rgb(0, 225, 255) 100%);
+}
+body {
+    margin-left: -10%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    height: 100vh;
+    background: linear-gradient(325deg, rgb(0, 225, 255) 0%, rgb(0, 0, 0) 50%,rgb(255, 0, 238) 100%);
+}
+
+#mix {
+	margin-top: -40%;
+	margin-left: -30%;
+}
+
+#dings {
+	color: rgb(0, 255, 255);
+	background-color: black;
+}

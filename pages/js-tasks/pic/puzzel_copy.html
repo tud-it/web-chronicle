@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" lang="de" />
+    <title>Schiebepuzzle</title>
+    <link rel="stylesheet" href="./puzzel_copy.css" type="text/css">
+    <script type="text/javascript" src="./puzzel_copy.js"></script>
+  </head>
+
+  <body>
+    <div id="puzzle">&nbsp;</div>
+    <div id="mix">
+    <p>
+        <br>
+        <table>
+          <tr>
+            <td id="dings">Spielfeldgröße</td>
+            <td><input type="number" value="größe" id="gamesize"></td>
+          </tr>
+          <tr>
+            <td><input onclick="mischen()" type="button" value="Spielen" /><br /></td>
+          </tr>
+          <tr>
+            <td><input type="text" placeholder="bildquelle" id="link"></td>
+            <td><input onclick="changepic(document.getElementById('puzzle'))" type="button" value="Change" /></td>
+          </tr>
+        </table>
+        <br />
+    </p>
+  </div>
+    <script type="text/javascript">
+      initSpielfeld();
+      getSpielfeld();
+  </script>
+  </body>
