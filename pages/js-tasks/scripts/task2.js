@@ -2,12 +2,11 @@ var Züge;
 var feld = [1, 2, 3, 4, 5, 6, 7, 8, ""];
 var finished = true;
 var height = 3; //=document.getElementById('gameheight')
-var width = 2;
+var width = 3;
 var SFX_move = new Audio("./../../../sound/Move.mp3");
 var SFX_win = new Audio("./../../../sound/Victory.mp3");
 var SFX_wrong = new Audio("./../../../sound/Wrong.mp3");
 var SFX_start = new Audio("./../../../sound/Start.mp3");
-
 function shuffle(arr) {
   const shuffled = arr.sort(() => 0.5 - Math.random());
   var ranArr = shuffled.slice(0, height * width);
